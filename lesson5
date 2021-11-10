@@ -1,0 +1,34 @@
+print(' 1. Зарегистрировать студента \n 2. Удалить студента из списка \n 3. Получить список студентов \n 0. Завершить')
+
+lis = list()
+
+
+def reg():
+    Name = str(input('Имя: '))
+    Age = int(input('Возраст: '))
+    ID = int(input('ID: '))
+    lis.append(Name)
+    lis.append(Age)
+    lis.append(ID)
+
+def remove_user(user_id):
+    lis.pop(user_id)
+
+
+def print_list():
+    print(lis)
+
+
+while 1:
+    a = int(input(' : '))
+
+    if a == 1:
+        reg()
+    elif a == 2:
+        user_id = int(input('delID: '))
+        remove_user(user_id)
+
+    elif a == 3:
+        print_list()
+    elif a == 0:
+        break
